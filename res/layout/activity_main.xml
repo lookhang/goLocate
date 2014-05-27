@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:orientation="vertical">
+
+	<TextView android:id="@+id/imei_tv" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:padding="@dimen/padding_medium"
+		tools:context=".MainActivity" />
+
+	<TextView android:id="@+id/location_tv" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:padding="@dimen/padding_medium"
+		tools:context=".MainActivity" />
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+
+		<TextView android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:text="@string/perSecond_tv"
+			android:id="@+id/perSecond_tv" android:padding="@dimen/padding_medium" />
+
+		<!-- EditText android:id="@+id/perSecond" android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" android:ems="3" android:numeric="integer" 
+			android:text="180" > </EditText> <TextView android:id="@+id/textView1" android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" android:text="10s-999s" / -->
+
+	</LinearLayout>
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+
+		<TextView android:id="@+id/server_addr_tv"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/server_addr" android:padding="@dimen/padding_medium" />
+
+		<!-- EditText android:id="@+id/server_addr" android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" android:ems="12" android:text="@string/server_addr_default" 
+			/ -->
+	</LinearLayout>
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal">
+
+		<TextView android:id="@+id/server_port_tv"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/server_port" android:padding="@dimen/padding_medium" />
+
+		<!-- EditText android:id="@+id/server_port" android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" android:ems="4" android:numeric="integer" 
+			android:text="@string/server_port_default" > </EditText -->
+	</LinearLayout>
+
+	<!-- Button android:id="@+id/sendData" android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" android:onClick="sendData" android:text="@string/sendData_btn" 
+		/ -->
+
+	<!--Button android:id="@+id/stopSendData" android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" android:onClick="stopSendData" android:text="@string/stop_sendData_btn" 
+		android:enabled="false" / -->
+
+	<TextView android:id="@+id/sendState_tv" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:padding="@dimen/padding_medium" />
+
+	<!-- 故障打点和基站打点按钮 -->
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:orientation="horizontal"
+		android:gravity="center">
+		<Button android:layout_width="wrap_content" android:text="故障打点"
+			android:id="@+id/bugLocate_btn" android:layout_height="wrap_content"
+			android:layout_weight="1" android:onClick="bugDataLocateHandle" android:enabled="false"></Button>
+		<Button android:layout_width="wrap_content" android:text="基站打点"
+			android:id="@+id/gsmStationLocate_btn" android:layout_height="wrap_content"
+			android:layout_weight="1" android:onClick="gsmStationLocateHandle" android:enabled="false"></Button>
+
+
+	</LinearLayout>
+
+
+	<ScrollView android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:fadingEdge="vertical"
+		android:scrollbars="vertical" android:visibility="gone">
+		<TextView android:id="@+id/sendlog" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:scrollbars="vertical"
+			android:singleLine="false" />
+	</ScrollView>
+
+</LinearLayout>

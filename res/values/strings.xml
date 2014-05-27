@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">定时位置上传</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_about">关于</string>
+    <string name="menu_monitor">安装守护程序</string>
+    <string name="title_activity_main">获取位置信息</string>
+    <string name="perSecond_tv">发送时间间隔（秒）：</string>
+    <string name="sendData_btn">发送数据</string>
+	<string name="stop_sendData_btn">停止发送</string>
+	<string name="server_addr">服务器：</string>
+	<string name="server_addr_default">192.168.1.50</string>
+	<string name="server_port">端    口：</string>
+	<string name="server_port_default">8888</string>
+	<string name="prefTitle">我的设置</string>
+	<string name="about"></string>
+</resources>
